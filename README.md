@@ -36,8 +36,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Challenges encountered while building the app:
-1. I was using XCode 8 (the latest version) and it was a little buggy in that it wasn't letting me connect an action to an already existing function (calculateTip). To fix it, I had to change the argument in the function header from "_ sender: Any" to "_ sender: AnyObject".
-2. When returning from the Settings page, I was updating the selectedIndex of tipControl programatically and because it is wired to trigger an action only when it's done via user interation, I wasn't seeing the tip or the total amounts updating (i.e. calculateTip wasn't getting called). To fix it, I had to insert another function call: tipControl.sendActions(for: UIControlEvents.valueChanged).
+* I was using XCode 8 (the latest version) and it was a little buggy in that it wasn't letting me connect an action to an already existing function (calculateTip). To fix it, I had to change the argument in the function header from "_ sender: Any" to "_ sender: AnyObject".
+* When returning from the Settings page, I was updating the selectedIndex of tipControl programatically and because it is wired to trigger an action only when it's done via user interation, I wasn't seeing the tip or the total amounts updating (i.e. calculateTip wasn't getting called). To fix it, I had to insert another function call: tipControl.sendActions(for: UIControlEvents.valueChanged).
 
 ## License
 
